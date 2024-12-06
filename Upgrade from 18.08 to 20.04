@@ -1,0 +1,36 @@
+  - Upgrade da 18.04 a  20.04,
+    eseguire i seguenti comandi:
+    sudo apt update
+    sudo apt upgrade
+    sudo apt dist-upgrade
+    sudo apt-get update && sudo apt-get upgrade
+    sudo apt autoremove
+    sudo apt install update-manager-core
+    sudo do-release-upgrade -d
+    
+ alla fine fare pure: sudo apt install ubuntu-desktop
+     
+   
+  
+
+ERRORI conseguenti
+----------------
+- python non trova pip, pygame
+  eseguire l'installazioe di pip e poi di pygame
+
+- Boot lento: provare a disabilitare da bios/uefi il safe boot
+  eliminare la splash screen:
+  aprire: sudo nano /etc/default/grub
+  modificare: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+  aggiornare grub: sudo update-grub
+  fare il restart
+
+- servizio mysql non parte
+eseguire:
+  sudo apt-get purge  mysql-server-8.0
+rispondere NO alla richiesta d rimozione dei database
+  sudo apt-get install  mysql-server-8.0
+  
+
+- GNOME (shell grafica) non visualizza le cartelle della Scrivania,
+  eseguire: sudo apt install gnome-shell-extension-desktop-icons
