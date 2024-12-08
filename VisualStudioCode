@@ -1,0 +1,19 @@
+Installare "Visual Studio Code" da Ubntu Software
+Installare "pip" (tool python per installare moduli): 
+  scaricare "get-pip.py" (oppure utilizzare file di questo repository)
+  eseguire: python3 get-pip.py
+  se ERRORE del tipo "launchpadlib 1.10.13 requires testresources, which is not installed"
+  allora eseguire: 
+      sudo apt install python3-testresources
+      python3 get-pip.py
+
+Su VS Code, File -> Preferences -> Extensions,  cercare Python ed installarla
+
+Installare pygame: pip install pygame
+
+Quando si eseguono programmi python, sono riportati problemi NON veri.
+Per risolvere il problema: copiare 
+              "python.linting.pylintArgs": [
+              "----extension-pkg-whitelist=1xml"
+              ]
+sotto i settings (File->Preferences->Setting e cercare settings.json) 
