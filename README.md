@@ -1,2 +1,2 @@
-# Ubuntu_18.04
-Breve raccolta di procedure utili per installazioni sotto Ubuntu 18.04 LTS
+# Ubuntu
+Breve raccolta di procedure utili sotto Ubuntu 18.04 LTS e 24.04 LTS
